@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 10px;
+        }
+        h1, h2 {
+            color: #005f73;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #0a9396;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0a9396;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #007f86;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Enhanced Multi-Section Web Page</h1>
+    <p>This page demonstrates structured content with lists, tables, and media, followed by a fully-featured HTML5 form.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Features Overview</h2>
+        <ul>
+            <li>Accessible, semantic HTML5 structure</li>
+            <li>Native HTML5 validation</li>
+            <li>Variety of input types and attributes</li>
+        </ul>
+
+        <h2>Service Packages</h2>
+        <table>
+            <caption>Available Plans</caption>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Features</th>
+                    <th>Price ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic</td>
+                    <td>Form functionality only</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Standard</td>
+                    <td>Form + Table</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>Form + Table + Media</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Media Showcase</h2>
+        <figure>
+            <img src="https://via.placeholder.com/800x200.png?text=Media+Banner" alt="Sample banner">
+            <figcaption>Sample banner image for demonstration purposes.</figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+2348012345678" 
+                       pattern="^\+?[0-9\s\-]{7,15}$" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">--Select Country--</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" minlength="4" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter a strong password" minlength="8" required>
+
+                <label for="account-id">Account ID (Read-only):</label>
+                <input type="text" id="account-id" name="account-id" value="ACCT-00001" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color">
+
+                <label for="profile-pic">Profile Picture:</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+
+                <label for="about">About You:</label>
+                <textarea id="about" name="about" rows="4" placeholder="Write something about yourself..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label>
+                    <input type="checkbox" name="newsletter" value="yes" checked> Subscribe to newsletter
+                </label>
+
+                <label>
+                    <input type="radio" name="contact-method" value="email" required> Contact me by Email
+                </label>
+                <label>
+                    <input type="radio" name="contact-method" value="phone"> Contact me by Phone
+                </label>
+            </fieldset>
+
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 EJUSTFUMZ Enhanced HTML5 Form Demo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
